@@ -1,0 +1,19 @@
+{
+    "name": "reinink/glide",
+    "description": "Super easy on-the-fly image cropping and resizing in PHP.",
+    "license": "MIT",
+    "authors" : [
+        {
+            "name": "Jonathan Reinink",
+            "email": "jonathan@reinink.ca",
+            "role": "Developer"
+        }
+    ],
+    "autoload":
+    {
+        "psr-0":
+        {
+            "Glide": "src/"
+        }
+    }
+}
