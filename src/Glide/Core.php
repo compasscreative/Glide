@@ -30,6 +30,11 @@ abstract class Core
                 $this->setCropByRatio($sizes[0]/$sizes[1]);
             }
 
+            if (strpos($segment, 'crop_') === 0) {
+                $sizes = explode('_', substr($segment, 5));
+                $this->setCropByCoordinates($sizes[0], $sizes[1], $sizes[2], $sizes[3]);
+            }
+
             if (strpos($segment, 'width_') === 0) {
                 $this->setWidth(substr($segment, 6));
             }
