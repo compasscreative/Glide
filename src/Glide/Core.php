@@ -28,9 +28,7 @@ abstract class Core
             if (strpos($segment, 'crop_ratio_') === 0) {
                 $sizes = explode('_', substr($segment, 11));
                 $this->setCropByRatio($sizes[0]/$sizes[1]);
-            }
-
-            if (strpos($segment, 'crop_') === 0) {
+            } else if (strpos($segment, 'crop_') === 0) {
                 $sizes = explode('_', substr($segment, 5));
                 $this->setCropByCoordinates($sizes[0], $sizes[1], $sizes[2], $sizes[3]);
             }
